@@ -11,5 +11,5 @@ class PitchForm(FlaskForm):
     pitch_title = StringField('Title', validators=[Required()])
     content = TextAreaField('Your Pitch', validators=[Required()])
     category = SelectField('Category', choices=[('Interview-Pitch','Interview Pitch'),('Product Pitch'),('Promotion Pitch','Business Pitch'], validators[Required()])
-    submit = SubmitField('Comment')
+    submit = SubmitField('Pitch it')
     
