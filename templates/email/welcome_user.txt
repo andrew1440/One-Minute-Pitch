@@ -1,0 +1,3 @@
+Hello {{user.username}}
+welcome to Shaddai Idea Hub
+we have seen you have signed up  welcome to the family. Please Pitch your ideas with us
