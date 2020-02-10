@@ -10,6 +10,9 @@ class UpdateProfile(FlaskForm):
 class PitchForm(FlaskForm):
     pitch_title = StringField('Title', validators=[Required()])
     content = TextAreaField('Your Pitch', validators=[Required()])
-    category = SelectField('Category', choices=[('Interview-Pitch','Interview Pitch'),('Product Pitch'),('Promotion Pitch','Business Pitch'], validators[Required()])
-    submit = SubmitField('Comment')
-    
+    category = SelectField('Category', choices=[('Interview-Pitch','Interview Pitch'),('Product Pitch'),('Promotion Pitch','Business Pitch'), validators[Required()])
+    submit = SubmitField('Pitch it')
+
+class CommentForm(FlaskForm):    
+    details = TextAreaField('Leave your comment', validators=[Required()])
+    submit  = SubmitField('Comment')                                                                                                                    
