@@ -5,3 +5,18 @@ Andrew Odongo
 
 ## Description
 this application allows users to post, like, comment share and dislike 
+
+## Technologies Used
+HTML 5
+
+Bootstrap 4
+
+Heroku 
+
+python3.7
+
+Flask
+
+Flask script
+
+Flask Wtf
