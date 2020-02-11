@@ -1,0 +1,117 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
+
+<!-- Styles block -->
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Creative - One Minute Pitch </title>
+
+
+  <!-- Custom styles for this template -->
+
+  {{ super() }}
+  <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+
+</head>
+
+<body id="page-top">
+  <!-- Header -->
+<section class="text-white text-center section-1">
+  <header class="masthead text-center text-black d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1><strong>Your to goto website that allows your to post and view pitches</strong></h1>
+            <button type="button" class="btn btn-light btn-xl" ><a href="{{url_for('main.new_pitch')}}">Get Started</a></button>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">At Your Service</h2>
+          <h5 class="section-subheading text-muted">How do we make sure that you use your 1 minute to actually say something meaningful?</h5>
+          <hr class="my-4">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <h3 class="mb-3">Post Pitches</h3>
+            <p class="text-muted mb-0">At our shaddai hub our main aim is to get users to share their ideas with others and
+              make an impression</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <h3 class="mb-3">View Pitches</h3>
+            <p class="text-muted mb-0">At Idea Hub we as well allow our users to view pitches posted by other users,
+              upvote or downvote them and as well leave a comment</p>
+          </div>
+        </div>
+  </section>
+
+  <!-- Get started -->
+  <div class="join" id="us">
+  <section class="bg-dark text-white section-2">
+      <div class="container text-center">
+        <h2 class="mb-4">About Us</h2>
+        <a class="btn btn-light btn-xl sr-button" href="{{url_for('auth.login')}}">Sign in</a>
+      </div>
+    </section>
+    </div>
+
+<!-- Contact section -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="section-heading">Let's Get In Touch!</h2>
+          <hr class="my-4">
+          <p class="mb-5">Give us a call or send us an email and we will get back to you as soon as possible!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 ml-auto text-center">
+          <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
+          <p>254-169-839</p>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
+          <p>
+            <a href="mailto:shaddaihub96@gmail.com">shaddaihub96@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  {% endblock%}
