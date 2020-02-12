@@ -20,3 +20,14 @@ Flask
 Flask script
 
 Flask Wtf
+
+## Set Up and Installations
+
+## prequisities
+Python3.6
+
+virtualenv
+
+Pip
+
+Flask
