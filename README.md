@@ -37,6 +37,7 @@ Flask
 [![codebeat badge](https://codebeat.co/badges/03d90c81-daf1-4812-a07c-ba6c945f25cd)](https://codebeat.co/projects/github-com-andrew1440-one-minute-pitch-master)
 
 ## livelink
+https://kip-one-minute-pitch.herokuapp.com/
 
 ## Contacts
 Email:drewodongo470@gmail.com
