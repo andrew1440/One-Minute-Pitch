@@ -1,4 +1,4 @@
-# pitch
+#One-Minute-pitch
 
 ## Author
 Andrew Odongo
@@ -31,6 +31,10 @@ virtualenv
 Pip
 
 Flask
+
+## Codebeat
+
+[![codebeat badge](https://codebeat.co/badges/03d90c81-daf1-4812-a07c-ba6c945f25cd)](https://codebeat.co/projects/github-com-andrew1440-one-minute-pitch-master)
 
 ## livelink
 
