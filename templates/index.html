@@ -1,117 +1,63 @@
 {% extends 'base.html'%}
-{% import 'macros.html' as macro %}
-
-<!-- Styles block -->
+{% import 'macros.html' as macro%}
 
 {% block styles%}
 {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link href="https://fonts.googleapis.com/css?family=Akronim|Bellefair|Joti+One" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Creative - Pitch </title>
-
-
-  <!-- Custom styles for this template -->
-
-  {{ super() }}
-  <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-
-</head>
-
-<body id="page-top">
-  <!-- Header -->
-<section class="text-white text-center section-1">
-  <header class="masthead text-center text-black d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1><strong>Your to goto website that allows your to post and view pitches</strong></h1>
-            <button type="button" class="btn btn-light btn-xl" ><a href="{{url_for('main.new_pitch')}}">Get Started</a></button>
-            <hr>
-          </div>
-          <div class="col-lg-8 mx-auto">
-          </div>
+    <div class="container" style="background-color:gainsboro; padding:20px; margin-top:0px; padding-top:40px; padding-bottom:400px;">
+        <div class="row" style="text-align:center; font-size:30px;">
+            <span style="font-size:40px; font-family: 'Akronim', cursive;">oNe mINute PiTch</span>
         </div>
-      </div>
-    </header>
-  </section>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3"> 
+                    <a href="{{url_for('main.interview')}}" style="font-family: 'Joti One', cursive; font-size:20px;">
+                        <br>
+                        Inteview Pitches
+                    </a>
+                    <br>
+                    <a href="{{url_for('main.pick_up_line')}}" style="font-family: 'Joti One', cursive; font-size:20px;">
+                        <br>
+                        Pick Up Lines
+                    </a>
+                    <br>
+                    <a href="{{url_for('main.promotion')}}" style="font-family: 'Joti One', cursive; font-size:20px;">
+                        <br>
+                        Promotion Pitches
+                    </a>
+                    <br>
+                    <a href="{{url_for('main.product')}}" style="font-family: 'Joti One', cursive; font-size:20px;">
+                        <br>
+                        Product Pitches
+                    </a>
+                    <br>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+            <div class="panel style="style="border: 3px solid #f2f2f2; padding:20px; margin-top:10px;">
+                <p style="font-family: 'Bellefair', serif; font-size:20px;">Write your one minute in any of the categories to the left and let other user vote and comment on it.Please also feel free to comment and vote on pitches posted by other people </p>
+                
+                <div style="text-align:center;">
+                    <a href="{{url_for('main.new_pitch')}}">
+                        <br>
+                        <span >Add a new Pitch</span>
+                    </a>
 
-  <!-- Services -->
-  <section id="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading">At Your Service</h2>
-          <h5 class="section-subheading text-muted">How do we make sure that you use your 1 minute to actually say something meaningful?</h5>
-          <hr class="my-4">
+                </div>
+            
+            </div>
+            
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 text-center">
-          <div class="service-box mt-5 mx-auto">
-            <h3 class="mb-3">Post Pitches</h3>
-            <p class="text-muted mb-0">At our shaddai hub our main aim is to get users to share their ideas with others and
-              make an impression</p>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 text-center">
-          <div class="service-box mt-5 mx-auto">
-            <h3 class="mb-3">View Pitches</h3>
-            <p class="text-muted mb-0">At Idea Hub we as well allow our users to view pitches posted by other users,
-              upvote or downvote them and as well leave a comment</p>
-          </div>
-        </div>
-  </section>
+    </hr>
+        <div class="all-pitches">
+            <span style="color:gainsboro;">All pitches are displayed below</span>
+                <hr> 
+                {{macro.displayPitches(pitches)}}
+            
 
-  <!-- Get started -->
-  <div class="join" id="us">
-  <section class="bg-dark text-white section-2">
-      <div class="container text-center">
-        <h2 class="mb-4">About Us</h2>
-        <a class="btn btn-light btn-xl sr-button" href="{{url_for('auth.login')}}">Sign in</a>
-      </div>
-    </section>
+        </div>
+
     </div>
 
-<!-- Contact section -->
-  <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <h2 class="section-heading">Let's Get In Touch!</h2>
-          <hr class="my-4">
-          <p class="mb-5">Give us a call or send us an email and we will get back to you as soon as possible!</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 ml-auto text-center">
-          <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
-          <p>254-169-839</p>
-        </div>
-        <div class="col-lg-4 mr-auto text-center">
-          <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
-          <p>
-            <a href="mailto:shaddaihub96@gmail.com">shaddaihub96@gmail.com</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-
-
-
-  {% endblock%}
+{% endblock %}
